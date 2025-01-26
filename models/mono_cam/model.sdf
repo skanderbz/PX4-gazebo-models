@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<sdf version='1.9'>
-  <model name='mono_cam'>
+<sdf version="1.9">
+  <model name="mono_cam">
     <pose>0 0 0 0 0 0</pose>
     <self_collide>false</self_collide>
     <static>false</static>
@@ -17,62 +17,31 @@
           <izz>0.00004</izz>
         </inertia>
       </inertial>
-      <visual name="mono_cam/visual/housing">
-        <geometry>
-          <box>
-            <size>0.02 0.04 0.04</size>
-          </box>
-        </geometry>
-      </visual>
-      <visual name="mono_cam/visual/lens">
-        <pose>0.015 0 0 0 1.5707 0</pose>
-        <geometry>
-          <cylinder>
-            <radius>0.008</radius>
-            <length>0.01</length>
-          </cylinder>
-        </geometry>
-      </visual>
-      <visual name="mono_cam/visual/lens_glass">
-        <pose>0.014 0 0 0 0 0</pose>
-        <geometry>
-          <sphere>
-            <radius>0.0079</radius>
-          </sphere>
-        </geometry>
-        <material>
-          <ambient>.4 .4 .5 .95</ambient>
-          <diffuse>.4 .4 .5 .95</diffuse>
-          <specular>1 1 1 1</specular>
-          <emissive>0 0 0 1</emissive>
-        </material>
-      </visual>
-        <sensor name="thermal_camera" type="camera">
-        <pose>0 0 0 0 0 0</pose> <!-- Slightly offset for thermal -->
+      <sensor name="thermal_camera" type="camera">
+        <pose>0 0 -0.3 0 1.5708 0</pose> <!-- Slightly offset for thermal -->
         <camera>
-        <horizontal_fov>1.047</horizontal_fov> <!-- 60 degrees in radians -->
-        <image>
-        <width>640</width> <!-- Typical resolution for thermal sensors -->
-        <height>512</height>
-        <format>L8</format> <!-- Grayscale for thermal -->
-        </image>
-        <clip>
-        <near>5</near>
-        <far>200</far>
-        </clip>
-        <thermal>
-        <min_temperature>273.15</min_temperature> <!-- 0°C in Kelvin -->
-        <max_temperature>373.15</max_temperature> <!-- 100°C in Kelvin -->
-        <resolution>0.01</resolution> <!-- 0.01 Kelvin sensitivity -->
-        </thermal>
+          <horizontal_fov>1.047</horizontal_fov> <!-- 60 degrees in radians -->
+          <image>
+            <width>640</width> <!-- Typical resolution for thermal sensors -->
+            <height>512</height>
+            <format>L8</format> <!-- Grayscale for thermal -->
+          </image>
+          <clip>
+            <near>5</near>
+            <far>200</far>
+          </clip>
+          <thermal>
+            <min_temperature>273.15</min_temperature> <!-- 0°C in Kelvin -->
+            <max_temperature>373.15</max_temperature> <!-- 100°C in Kelvin -->
+            <resolution>0.01</resolution> <!-- 0.01 Kelvin sensitivity -->
+          </thermal>
         </camera>
         <always_on>1</always_on>
         <update_rate>1</update_rate>
         <visualize>true</visualize>
         <topic>thermal_camera</topic>
-        </sensor>
-      <gravity>true</gravity>
-      <velocity_decay/>
+      </sensor>
+ 
     </link>
   </model>
 </sdf>
