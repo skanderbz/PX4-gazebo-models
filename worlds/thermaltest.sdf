@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <sdf version="1.9">
   <world name="default">
     <physics type="ode">
@@ -213,6 +213,32 @@
       <pose>0 0 0 0 -0 0</pose>
       <self_collide>false</self_collide>
     </model>
+
+    <!-- Heated Cube -->
+	<model name="heated_box">
+	<static>false</static>
+	<link name="box_link">
+	<visual name="box_visual">
+	<geometry>
+		<box>
+		<size>0.5 0.5 0.5</size>
+		</box>
+	</geometry>
+	<material>
+		<ambient>1.0 0.0 0.0 1.0</ambient>   <!-- Red Glow -->
+		<diffuse>1.0 0.0 0.0 1.0</diffuse>   <!-- Red Reflection -->
+		<specular>1.0 0.0 0.0 1.0</specular> <!-- Red Specular -->
+		<emissive>1.0 0.0 0.0 1.0</emissive> <!-- Red Glow (Visual Only) -->
+	</material>
+	<temperature>
+		<value>300</value>  <!-- 300 Kelvin (hot object) -->
+		<gradient>0.5</gradient>  <!-- Smooth temperature transition -->
+	</temperature>
+	</visual>
+	<pose>2 1 0.5 0 0 0</pose> <!-- Position Above Ground -->
+	</link>
+	</model>
+
     <light name="sunUTC" type="directional">
       <pose>0 0 500 0 -0 0</pose>
       <cast_shadows>true</cast_shadows>
@@ -235,8 +261,8 @@
     <spherical_coordinates>
       <surface_model>EARTH_WGS84</surface_model>
       <world_frame_orientation>ENU</world_frame_orientation>
-      <latitude_deg>44.65026</latitude_deg>
-      <longitude_deg> -63.57300</longitude_deg>
+      <latitude_deg>47.397971057728974</latitude_deg>
+      <longitude_deg> 8.546163739800146</longitude_deg>
       <elevation>0</elevation>
     </spherical_coordinates>
   </world>
