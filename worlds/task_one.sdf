@@ -654,7 +654,7 @@
     </model>
     <model name="IREmitter1">
       <thermal>
-        <temperature>300</temperature>
+        <temperature>3081</temperature>
       </thermal>
       <!--Change the first three numbers (x,y,z) to change position-->
       <pose>-350 820 0.70 0 0 0</pose>
@@ -683,7 +683,7 @@
     </model>
     <model name="IREmitter2">
       <thermal>
-        <temperature>300</temperature>
+        <temperature>3081</temperature>
       </thermal>
       <pose>-420 750 0.53 0 0 0</pose>
       <static>true</static>
@@ -711,7 +711,7 @@
     </model>
     <model name="IREmitter3">
       <thermal>
-        <temperature>300</temperature>
+        <temperature>3081</temperature>
       </thermal>
       <pose>-380 780 0.84 0 0 0</pose>
       <static>true</static>
@@ -739,7 +739,7 @@
     </model>
     <model name="IREmitter4">
       <thermal>
-        <temperature>300</temperature>
+        <temperature>3081</temperature>
       </thermal>
       <pose>-460 830 0.99 0 0 0</pose>
       <static>true</static>
@@ -767,7 +767,7 @@
     </model>
     <model name="IREmitter5">
       <thermal>
-        <temperature>300</temperature>
+        <temperature>3081</temperature>
       </thermal>
       <pose>-410 880 1.47 0 0 0</pose>
       <static>true</static>
